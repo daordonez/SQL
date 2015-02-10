@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>ciclismo</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>kcid</key>
+			<string>1193935484447709312</string>
+			<key>name</key>
+			<string>Clase</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>clase</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentFilter</key>
+			<dict/>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoK0HCBUWFxgZHSQoLDA0VSRudWxs0wkK
+			CwwQFFdOUy5rZXlzWk5TLm9iamVjdHNWJGNsYXNzow0OD4ACgAOA
+			BKMREhOABYAGgAiADFR0eXBlVHJvd3NUa2V5c18QJlNlbGVjdGlv
+			bkRldGFpbFR5cGVQcmltYXJ5S2V5ZWREZXRhaWxz0wkKCxobHKCg
+			gAfSHh8gIVokY2xhc3NuYW1lWCRjbGFzc2VzXxATTlNNdXRhYmxl
+			RGljdGlvbmFyeaMgIiNcTlNEaWN0aW9uYXJ5WE5TT2JqZWN00goL
+			JSehJoAJgAvSCykqK1lOUy5zdHJpbmeAClZkb3JzYWzSHh8tLl8Q
+			D05TTXV0YWJsZVN0cmluZ6MtLyNYTlNTdHJpbmfSHh8xMl5OU011
+			dGFibGVBcnJheaMxMyNXTlNBcnJhedIeHyI1oiIjXxAPTlNLZXll
+			ZEFyY2hpdmVy0Tg5VGRhdGGAAQAIABEAGgAjAC0AMgA3AEUASwBS
+			AFoAZQBsAHAAcgB0AHYAegB8AH4AgACCAIcAjACRALoAwQDCAMMA
+			xQDKANUA3gD0APgBBQEOARMBFQEXARkBHgEoASoBMQE2AUgBTAFV
+			AVoBaQFtAXUBegF9AY8BkgGXAAAAAAAAAgEAAAAAAAAAOgAAAAAA
+			AAAAAAAAAAAAAZk=
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 475}, {1134, 659}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>#---------------------------
+# Equipos ciclistas
+#---------------------------
+INSERT INTO equipos VALUES("Agr2 Mondiale","Vincent Lavenu");
+INSERT INTO equipos VALUES("BMC Racing","James Ochowiz");
+INSERT INTO equipos VALUES("Caja Rural","Jose Manuel Hernandez");
+INSERT INTO equipos VALUES("Cofidis le credit en ligne","Yvon Sanquer");
+INSERT INTO equipos VALUES("FDJ","Marc Madiot");
+INSERT INTO equipos VALUES("Garmin-Cervelo","Jonathan Vaughters");
+INSERT INTO equipos VALUES("Greenedege Cycling Team","Shayne Bannan");
+INSERT INTO equipos VALUES("Katusha Teams","Viacheslav Ekimov");
+INSERT INTO equipos VALUES("Lampere-ISD","Giuseppe Saronni");
+INSERT INTO equipos VALUES("Leopard Trek","Luca Guercilena");
+INSERT INTO equipos VALUES("Liquigas-Canondale","Roberto Amadio");
+INSERT INTO equipos VALUES("Movistar Team","Eusebio Unzué");
+INSERT INTO equipos VALUES("Mtn-Qhubeka","Tiann Kannemeyer");
+INSERT INTO equipos VALUES("Omega Pharma-Lotto","Patrick Lefevere");
+INSERT INTO equipos VALUES("Pro Team Astana","Aleksandr Vinokurov");
+INSERT INTO equipos VALUES("RaboBank","Richard Plugge");
+INSERT INTO equipos VALUES("Saxo Bank Sunguard","Bjarme Riis");
+INSERT INTO equipos VALUES("Team Giant-Alpecin","Iwan Spekenbrink");
+INSERT INTO equipos VALUES("Sky Pro cycling","Dave Brailsfor");
+INSERT INTO equipos VALUES("Team Europcar","Jean-René Bernaudeau");
+INSERT INTO equipos VALUES("Team Radioshack","Bill Stapleton");
+
+#---------------------
+# Colores maillot
+#---------------------
+INSERT INTO maillot(tipo,color,premio) VALUES("Lider","Rojo",8000);
+INSERT INTO maillot(tipo,color,premio) VALUES("G_Montaña","Naranja",4000);
+INSERT INTO maillot(tipo,color,premio) VALUES("Combinado","Blanco",3000);
+INSERT INTO maillot(tipo,color,premio) VALUES("Ex_Puntos","Azul",2000);
+INSERT INTO maillot(tipo,color,premio) VALUES("Campeon","Amarillo",350000);
+
+#----------------------------------
+# Equipo Agr2 Mondiale
+#------------------------------------
+
+INSERT INTO ciclistas VALUES(11,"Huber Dupont",34,"Agr2 Mondiale");
+INSERT INTO ciclistas VALUES(12,"Carlos Alberto Betancur",25,"Agr2 Mondiale");
+INSERT INTO ciclistas VALUES(13,"Maxime Bouet",28,"Agr2 Mondiale");
+INSERT INTO ciclistas VALUES(14,"Damien Gaudin",28,"Agr2 Mondiale");
+INSERT INTO ciclistas VALUES(15,"Patrick Getsch",27,"Agr2 Mondiale");
+INSERT INTO ciclistas VALUES(16,"Yauheni Hutarovich",32,"Agr2 Mondiale");
+INSERT INTO ciclistas VALUES(17,"Lloyd Mondory",32,"Agr2 Mondiale");
+INSERT INTO ciclistas VALUES(18,"Rinaldo Nocentini",37,"Agr2 Mondiale");
+INSERT INTO ciclistas VALUES(19,"Sebastien Turgot",30,"Agr2 Mondiale");
+
+#-------------------------
+# Equipo BMC Racing
+#--------------------------
+INSERT INTO ciclistas VALUES(41,"Samuel Sanchez Gonzalez",36,"BMC Racing");
+INSERT INTO ciclistas VALUES(42,"Rohan Dennis",25,"BMC Racing");
+INSERT INTO ciclistas VALUES(43,"Cadel Evans",38,"BMC Racing");
+INSERT INTO ciclistas VALUES(44,"Philippe Gilbert",33,"BMC Racing");
+INSERT INTO ciclistas VALUES(45,"Steve Morabito",32,"BMC Racing");
+INSERT INTO ciclistas VALUES(46,"Dominik Nerz",26,"BMC Racing");
+INSERT INTO ciclistas VALUES(47,"Manuel Quinzquiato",36,"BMC Racing");
+INSERT INTO ciclistas VALUES(48,"Larry Warbasse",25,"BMC Racing");
+INSERT INTO ciclistas VALUES(49,"Danilo Wyss",29,"BMC Racing");
+#-------------------------
+# Equipo Caja Rural
+#-------------------------
+INSERT INTO ciclistas VALUES(,"",,"Caja Rural");
+INSERT INTO ciclistas VALUES(,"",,"Caja Rural");
+INSERT INTO ciclistas VALUES(,"",,"Caja Rural");
+INSERT INTO ciclistas VALUES(,"",,"Caja Rural");
+INSERT INTO ciclistas VALUES(,"",,"Caja Rural");
+INSERT INTO ciclistas VALUES(,"",,"Caja Rural");
+INSERT INTO ciclistas VALUES(,"",,"Caja Rural");
+INSERT INTO ciclistas VALUES(,"",,"Caja Rural");
+INSERT INTO ciclistas VALUES(,"",,"Caja Rural");
+#-------------------------
+# Equipo Cofidis le credit
+#-------------------------
+INSERT INTO ciclistas VALUES(71,"Daniel Navarro G",28,"Cofidis-le-credit");
+INSERT INTO ciclistas VALUES(72,"Jerôme Coppel",28,"Cofidis le credit");
+INSERT INTO ciclistas VALUES(73,"Romain Hardy",26,"Cofidis le credit");
+INSERT INTO ciclistas VALUES(74,"Gert Joeaar",27,"Cofidis le credit");
+INSERT INTO ciclistas VALUES(75,"Christophe le Mevel",25,"Cofidis le credit");
+INSERT INTO ciclistas VALUES(76,"Guillaume Levarlet",30,"Cofidis le credit");
+INSERT INTO ciclistas VALUES(77,"Luis Angle Mate",31,"Cofidis le credit");
+INSERT INTO ciclistas VALUES(78,"Yoann Bagot",29,"Cofidis le credit");
+INSERT INTO ciclistas VALUES(79,"Romain Zingle",29,"Cofidis le credit");
+#-------------------------
+# Equipo FDJ
+#-------------------------
+INSERT INTO ciclistas VALUES(91,"Nacer Bouhanni",25,"FDJ");
+INSERT INTO ciclistas VALUES(92,"Kenyy Elissonde",24,"FDJ");
+INSERT INTO ciclistas VALUES(93,"Murilo Antoniobil Fischer",24,"FDJ");
+INSERT INTO ciclistas VALUES(94,"Johan Le Bon",25,"FDJ");
+INSERT INTO ciclistas VALUES(95,"Laurent Mangel",34,"FDJ");
+INSERT INTO ciclistas VALUES(96,"Cedric Pineau",30,"FDJ");
+INSERT INTO ciclistas VALUES(97,"Thibaut Pinot",25,"FDJ");
+INSERT INTO ciclistas VALUES(98,"Anthony Roux",28,"FDJ");
+INSERT INTO ciclistas VALUES(99,"Gregory Soupe",27,"FDJ");
+#-------------------------
+# Equipo Garmin - Cervelo
+#-------------------------
+INSERT INTO ciclistas VALUES(101,"Ryder Hesjedal",35,"Garmin-Cervelo");
+INSERT INTO ciclistas VALUES(102,"Daniel Martin",29,"Garmin-Cervelo");
+INSERT INTO ciclistas VALUES(103,"Koldo Fernández",34,"Garmin-Cervelo");
+INSERT INTO ciclistas VALUES(104,"Nathan Haas",26,"Garmin-Cervelo");
+INSERT INTO ciclistas VALUES(105,"Nathan Brown",24,"Garmin-Cervelo");
+INSERT INTO ciclistas VALUES(106,"André Fernando",31,"Garmin-Cervelo");
+INSERT INTO ciclistas VALUES(107,"David Millar",30,"Garmin-Cervelo");
+INSERT INTO ciclistas VALUES(108,"Andrew Talansky",28,"Garmin-Cervelo");
+INSERT INTO ciclistas VALUES(109,"Johan Van Summeren",34,"Garmin-Cervelo");
+#-------------------------
+# Equipo Greenedege
+#-------------------------
+INSERT INTO ciclistas VALUES(181,"Sam Bewley",28,"Greenedege");
+INSERT INTO ciclistas VALUES(182,"Jhoan Esteban Chaves",25,"Greenedege");
+INSERT INTO ciclistas VALUES(183,"Simon Clarke",29,"Greenedege");
+INSERT INTO ciclistas VALUES(184,"Mitchell Docker",29,"Greenedege");
+INSERT INTO ciclistas VALUES(185,"Brett Daniel Lancaster",30,"Greenedege");
+INSERT INTO ciclistas VALUES(186,"Michael Matthews",25,"Greenedege");
+INSERT INTO ciclistas VALUES(187,"Cameron Meyer",23,"Greenedege");
+INSERT INTO ciclistas VALUES(188,"Ivan Santoramita",31,"Greenedege");
+INSERT INTO ciclistas VALUES(189,"Adam Yates",23,"Greenedege");
+#-------------------------
+# Equipo Katusha
+#-------------------------
+#-------------------------
+# Equipo Lampere
+#-------------------------
+#-------------------------
+# Equipo Liquigas
+#-------------------------
+#-------------------------
+# Equipo Movistar Team
+#-------------------------
+#-------------------------
+# Equipo NTN Qhubeka
+#-------------------------
+#-------------------------
+# Equipo Omega Pharma
+#-------------------------
+#-------------------------
+# Equipo Pro Team Astana
+#-------------------------
+#-------------------------
+# Equipo Quickstep
+#-------------------------
+#-------------------------
+# Equipo RaboBank
+#-------------------------
+#-------------------------
+# Equipo 
+#-------------------------
+#-------------------------
+# Equipo Saxo Bank
+#-------------------------
+#-------------------------
+# Equipo SKY Pro Cycling
+#-------------------------
+#-------------------------
+# Equipo Team Europcar
+#-------------------------
+#-------------------------
+# Equipo Radioshack
+#-------------------------</string>
+			<key>table</key>
+			<string>ciclistas</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>145</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>INSERT INTO ciclistas VALUES(181,"Sam Bewley",28,"Greenedege");
+INSERT INTO ciclistas VALUES(182,"Jhoan Esteban Chaves",25,"Greenedege");
+INSERT INTO ciclistas VALUES(183,"Simon Clarke",29,"Greenedege");
+INSERT INTO ciclistas VALUES(184,"Mitchell Docker",29,"Greenedege");
+INSERT INTO ciclistas VALUES(185,"Brett Daniel Lancaster",30,"Greenedege");
+INSERT INTO ciclistas VALUES(186,"Michael Matthews",25,"Greenedege");
+INSERT INTO ciclistas VALUES(187,"Cameron Meyer",23,"Greenedege");
+INSERT INTO ciclistas VALUES(188,"Ivan Santoramita",31,"Greenedege");
+INSERT INTO ciclistas VALUES(189,"Adam Yates",23,"Greenedege")</string>
+		<string>INSERT INTO ciclistas VALUES(181,"Sam Bewley",28,"Greenedege Cycling T");
+INSERT INTO ciclistas VALUES(182,"Jhoan Esteban Chaves",25,"Greenedege Cycling T");
+INSERT INTO ciclistas VALUES(183,"Simon Clarke",29,"Greenedege Cycling T");
+INSERT INTO ciclistas VALUES(184,"Mitchell Docker",29,"Greenedege Cycling T");
+INSERT INTO ciclistas VALUES(185,"Brett Daniel Lancaster",30,"Greenedege Cycling T");
+INSERT INTO ciclistas VALUES(186,"Michael Matthews",25,"Greenedege Cycling T");
+INSERT INTO ciclistas VALUES(187,"Cameron Meyer",23,"Greenedege Cycling T");
+INSERT INTO ciclistas VALUES(188,"Ivan Santoramita",31,"Greenedege Cycling T");
+INSERT INTO ciclistas VALUES(189,"Adam Yates",23,"Greenedege Cycling T")</string>
+		<string>INSERT INTO ciclistas VALUES(101,"Ryder Hesjedal",35,"Garmin-Cervelo");
+INSERT INTO ciclistas VALUES(102,"Daniel Martin",29,"Garmin-Cervelo");
+INSERT INTO ciclistas VALUES(103,"Koldo Fernández",34,"Garmin-Cervelo");
+INSERT INTO ciclistas VALUES(104,"Nathan Haas",26,"Garmin-Cervelo");
+INSERT INTO ciclistas VALUES(105,"Nathan Brown",24,"Garmin-Cervelo");
+INSERT INTO ciclistas VALUES(106,"André Fernando",31,"Garmin-Cervelo");
+INSERT INTO ciclistas VALUES(107,"David Millar",30,"Garmin-Cervelo");
+INSERT INTO ciclistas VALUES(108,"Andrew Talansky",28,"Garmin-Cervelo");
+INSERT INTO ciclistas VALUES(109,"Johan Van Summeren",34,"Garmin-Cervelo")</string>
+		<string>INSERT INTO ciclistas VALUES(91,"Nacer Bouhanni",25,"FDJ");
+INSERT INTO ciclistas VALUES(92,"Kenyy Elissonde",24,"FDJ");
+INSERT INTO ciclistas VALUES(93,"Murilo Antoniobil Fischer",24,"FDJ");
+INSERT INTO ciclistas VALUES(94,"Johan Le Bon",25,"FDJ");
+INSERT INTO ciclistas VALUES(95,"Laurent Mangel",34,"FDJ");
+INSERT INTO ciclistas VALUES(96,"Cedric Pineau",30,"FDJ");
+INSERT INTO ciclistas VALUES(97,"Thibaut Pinot",25,"FDJ");
+INSERT INTO ciclistas VALUES(98,"Anthony Roux",28,"FDJ");
+INSERT INTO ciclistas VALUES(99,"Gregory Soupe",27,"FDJ")</string>
+		<string>INSERT INTO ciclistas VALUES(99,"Gregory Soupe",27,"FDJ")</string>
+		<string>INSERT INTO ciclistas VALUES(71,"Daniel Navarro G",28,"Cofidis");
+INSERT INTO ciclistas VALUES(72,"Jerôme Coppel",28,"Cofidis");
+INSERT INTO ciclistas VALUES(73,"Romain Hardy",26,"Cofidis");
+INSERT INTO ciclistas VALUES(74,"Gert Joeaar",27,"Cofidis");
+INSERT INTO ciclistas VALUES(75,"Christophe le Mevel",25,"Cofidis");
+INSERT INTO ciclistas VALUES(76,"Guillaume Levarlet",30,"Cofidis");
+INSERT INTO ciclistas VALUES(77,"Luis Angle Mate",31,"Cofidis");
+INSERT INTO ciclistas VALUES(78,"Yoann Bagot",29,"Cofidis");
+INSERT INTO ciclistas VALUES(79,"Romain Zingle",29,"Cofidis")</string>
+		<string>INSERT INTO ciclistas VALUES(71,"Daniel Navarro G",28,"Cofidis")</string>
+		<string>INSERT INTO ciclistas VALUES(71,"Daniel Navarro G",28,"Cofidis-le-credit")</string>
+		<string>INSERT INTO ciclistas VALUES(79,"Romain Zingle",29,"Cofidis le credit")</string>
+		<string>USE ciclismo</string>
+		<string>us ciclismo</string>
+		<string>SHOW DATABASES</string>
+		<string>#-------------------------
+# Equipo Cofidis le credit
+#-------------------------
+INSERT INTO ciclistas VALUES(71,"Daniel Navarro G",28,"Cofidis-le-credit")</string>
+		<string>#-------------------------
+# Equipo Cofidis le credit
+#-------------------------
+INSERT INTO ciclistas VALUES(71,"Daniel Navarro G",28,"Cofidis le credit")</string>
+		<string>INSERT INTO ciclistas VALUES(79,"Romain Zingle",29,"Cofidis le credit en ligne")</string>
+		<string>INSERT INTO ciclistas VALUES(71,"Daniel Navarro G",28,"Cofidis le credit en");
+INSERT INTO ciclistas VALUES(72,"Jerôme Coppel",28,"Cofidis le credit en");
+INSERT INTO ciclistas VALUES(73,"Romain Hardy",26,"Cofidis le credit en");
+INSERT INTO ciclistas VALUES(74,"Gert Joeaar",27,"Cofidis le credit en");
+INSERT INTO ciclistas VALUES(75,"Christophe le Mevel",25,"Cofidis le credit en");
+INSERT INTO ciclistas VALUES(76,"Guillaume Levarlet",30,"Cofidis le credit en");
+INSERT INTO ciclistas VALUES(77,"Luis Angle Mate",31,"Cofidis le credit en");
+INSERT INTO ciclistas VALUES(78,"Yoann Bagot",29,"Cofidis le credit en");
+INSERT INTO ciclistas VALUES(79,"Romain Zingle",29,"Cofidis le credit en")</string>
+		<string>USE pruebas_cl</string>
+		<string>CREATE DATABASE pruebas_cl</string>
+		<string>INSERT INTO ciclistas VALUES(41,"Samuel Sanchez Gonzalez",36,"BMC Racing");
+INSERT INTO ciclistas VALUES(42,"Rohan Dennis",25,"BMC Racing");
+INSERT INTO ciclistas VALUES(43,"Cadel Evans",38,"BMC Racing");
+INSERT INTO ciclistas VALUES(44,"Philippe Gilbert",33,"BMC Racing");
+INSERT INTO ciclistas VALUES(45,"Steve Morabito",32,"BMC Racing");
+INSERT INTO ciclistas VALUES(46,"Dominik Nerz",26,"BMC Racing");
+INSERT INTO ciclistas VALUES(47,"Manuel Quinzquiato",36,"BMC Racing");
+INSERT INTO ciclistas VALUES(48,"Larry Warbasse",25,"BMC Racing");
+INSERT INTO ciclistas VALUES(49,"Danilo Wyss",29,"BMC Racing")</string>
+		<string>INSERT INTO ciclistas VALUES(11,"Huber Dupont",34,"Agr2 Mondiale");
+INSERT INTO ciclistas VALUES(12,"Carlos Alberto Betancur",25,"Agr2 Mondiale");
+INSERT INTO ciclistas VALUES(13,"Maxime Bouet",28,"Agr2 Mondiale");
+INSERT INTO ciclistas VALUES(14,"Damien Gaudin",28,"Agr2 Mondiale");
+INSERT INTO ciclistas VALUES(15,"Patrick Getsch",27,"Agr2 Mondiale");
+INSERT INTO ciclistas VALUES(16,"Yauheni Hutarovich",32,"Agr2 Mondiale");
+INSERT INTO ciclistas VALUES(17,"Lloyd Mondory",32,"Agr2 Mondiale");
+INSERT INTO ciclistas VALUES(18,"Rinaldo Nocentini",37,"Agr2 Mondiale");
+INSERT INTO ciclistas VALUES(19,"Sebastien Turgot",30,"Agr2 Mondiale")</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.6.21</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
