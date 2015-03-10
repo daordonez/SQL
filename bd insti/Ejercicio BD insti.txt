@@ -1,0 +1,65 @@
+1. Crea BD Insti
+create database insti;
+
+2. Crea tabla alumnes=codi+nom+estudis
+use insti;
+create table alumnes(
+codi int PRIMARY KEY AUTO_INCREMENT,
+nom varchar(20),
+estudis varchar(20)
+)ENGINE = InnoDB;
+
+3. Introducir 9 alumnes(3 PQP,3 ESO, 3 DAM)
+insert into alumnes(nom,estudis) values("toni","dam"),("manolo","dam"),("pepe","dam"),("toni","eso"),("toni","eso"),("toni","eso"),("toni","pqp"),("toni","pqp"),("toni","pqp");
+
+4. A partir de la taula alumnes:
+	- Crea taula a_dam
+	- Amb (codi i nom) dels alumnes de DAM
+CREATE TABLE a_dam SELECT codi,nom from alumnes where estudis="dam";
+
+5. Crea taula a_eso amb (codi,nom)
+create table a_eso(
+codi int PRIMARY KEY AUTO_INCREMENT,
+nom varchar(20)
+)ENGINE = InnoDB;
+//Otra solución al 5 para crear tabla mediante select donde no se cumpla el where para que no copie los datos.
+create table a_eso as
+select cod,nom
+from alumnes
+where false;
+
+6. Inserix 3 alumnes d'eso en a_eso (amb codis que no estiguen en taula d'alumnes)
+insert into a_eso(nom) values("toni"),("manolo"),("pepe")
+
+7. COpia els d'eso de la taula alumnes a la taula a_eso
+insert into a_eso(nom) select nom from alumnes where estudis="ESO";
+
+8. Esborra de la taula alumnes els d'eso i dam.
+delete from alumnes where estudis="ESO" OR estudis="DAM"
+
+9. Afegim camp nota a taula alumnes (ALTER TABLE)
+ALTER TABLE alumnes ADD column nota int;
+
+10. Posem a tots una nota fictícia basant-nos en el codi(UPDATE)
+UPDATE alumnes SET nota = codi;
+
+11. Afegim altre camp nota2 a alumnes
+ALTER TABLE alumnes ADD column nota2 int;
+
+12. Que la nota2 siga igual que la nota més un 10%
+
+13. Quants alumnes n'hi ha?
+
+14. Quants alumnes no són de PQPI?
+
+15. Trau la nota mitja de tots el alumnes (camp nota)
+
+16. Trau la nota mitja de l'alumne 1 (la mitja de les seues 2 notes)
+
+17. Nota mitja de cada alumne
+
+18. Nota màxima i mínima de tots els alumnes
+
+19. Nota mitja de tots els alumnes aprovats
+
+20. MOstra les diferentes notes suspeses que s'han tret
