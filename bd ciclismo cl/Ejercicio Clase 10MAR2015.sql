@@ -146,3 +146,33 @@ SELECT `ciclista`, count(*) , "Ports"
 FROM ports
 GROUP BY `ciclista`
 ORDER BY ciclista,premis;
+
+-- 4.5.3
+-- I1
+SELECT ciclistes.nom , ciclistes.equip, director
+FROM ciclistes, equips
+WHERE ciclistes.`equip` = equips.nom;
+
+-- I2
+SELECT  ports.nom, etapes.`eixida`, etapes.`arribada`
+FROM etapes, ports
+WHERE ports.`etapa`= etapes.`numero`;
+
+-- I3
+SELECT ciclistes.equip, equips.director, count(*) AS Q_Ciclistes
+FROM ciclistes, equips
+WHERE ciclistes.equip = equips.nom
+GROUP BY equip;
+
+-- I4
+SELECT ciclistes.nom, count(*) AS Victories
+FROM ciclistes, `etapes`
+WHERE etapes.ciclista = ciclistes.dorsal
+GROUP BY ciclista
+HAVING count(*) > 1
+ORDER BY Victories,nom;
+
+-- I5
+SELECT ciclistes.nom AS Nom, etapes.`numero` AS N_Etapa, ports.nom
+FROM ciclistes,etapes, ports
+WHERE ports.etapa = etapes.numero AND ports.ciclista = ciclistes.dorsal AND etapes.`eixida` = "Igualada";
