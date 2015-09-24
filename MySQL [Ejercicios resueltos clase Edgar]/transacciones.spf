@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>proves_trans</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>name</key>
+			<string>root@127.0.0.1</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>latin1</string>
+			<key>contentFilter</key>
+			<dict/>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoK4HCBUWFxgZHSQpLTE0OFUkbnVsbNMJ
+			CgsMEBRXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6MNDg+AAoAD
+			gASjERITgAWABoAIgA1UdHlwZVRyb3dzVGtleXNfECZTZWxlY3Rp
+			b25EZXRhaWxUeXBlUHJpbWFyeUtleWVkRGV0YWlsc9MJCgsaGxyg
+			oIAH0h4fICFaJGNsYXNzbmFtZVgkY2xhc3Nlc18QE05TTXV0YWJs
+			ZURpY3Rpb25hcnmjICIjXE5TRGljdGlvbmFyeVhOU09iamVjdNIK
+			CyUooiYngAmAC4AM0gsqKyxZTlMuc3RyaW5ngApWYWx1bW5l0h4f
+			Li9fEA9OU011dGFibGVTdHJpbmejLjAjWE5TU3RyaW5n0gsqKzOA
+			ClVhc3NpZ9IeHzU2Xk5TTXV0YWJsZUFycmF5ozU3I1dOU0FycmF5
+			0h4fIjmiIiNfEA9OU0tleWVkQXJjaGl2ZXLRPD1UZGF0YYABAAgA
+			EQAaACMALQAyADcARgBMAFMAWwBmAG0AcQBzAHUAdwB7AH0AfwCB
+			AIMAiACNAJIAuwDCAMMAxADGAMsA1gDfAPUA+QEGAQ8BFAEXARkB
+			GwEdASIBLAEuATUBOgFMAVABWQFeAWABZgFrAXoBfgGGAYsBjgGg
+			AaMBqAAAAAAAAAIBAAAAAAAAAD4AAAAAAAAAAAAAAAAAAAGq
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {1077, 627}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>
+
+CREATE DATABASE proves_trans;
+USE proves_trans;
+
+
+CREATE TABLE alumnes(
+	exp INTEGER PRIMARY KEY AUTO_INCREMENT,
+	nom VARCHAR(30),
+	d_naix DATE
+);
+
+CREATE TABLE assigs(
+	codi VARCHAR(4) PRIMARY KEY,
+	nom VARCHAR(30),
+	hores INTEGER);
+	
+CREATE TABLE notes(
+	alumne INTEGER,
+	assig VARCHAR(4) ,
+	n1 DECIMAL(4,2) ,
+	n2 DECIMAL(4,2) ,
+	n3 DECIMAL(4,2) ,
+	nf DECIMAL(4,2) ,
+	
+	CONSTRAINT pk_notes
+		PRIMARY KEY (alumne,assig),
+
+	CONSTRAINT fk_alumne	
+	FOREIGN KEY (alumne) REFERENCES alumnes(exp)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE,
+
+	CONSTRAINT fk_assig
+	FOREIGN KEY (assig) REFERENCES assigs(codi)
+			ON UPDATE CASCADE
+			ON DELETE CASCADE
+	
+);
+
+INSERT INTO alumnes VALUES(1, "Pep", "1975-03-04");
+INSERT INTO alumnes VALUES(2, "Josep", "1974-06-05");
+INSERT INTO assigs VALUES('ADDA','Anàlisi i Disseny d’Aplicacions Informàtiques',10);INSERT INTO assigsVALUES('PLE','Programació en Llenguatges Estructurats',8);INSERT INTO notes(alumne,assig,n1,n2,n3) VALUES(1,'ADDA',1,2,3); 
+INSERT INTO notes(alumne,assig,n1,n2,n3) VALUES(1,'PLE',4,5,6); 
+INSERT INTO notes(alumne,assig,n1,n2,n3) VALUES(2,'ADDA',7,8,9);
+
+BEGIN;
+UPDATE notes
+	SET nf=((n1+n2+n3)/3) + 1;
+
+DELETE FROM alumnes
+	WHERE EXISTS (SELECT *
+					FROM assigs
+					WHERE codi NOT IN (SELECT assig
+											FROM notes
+											WHERE alumne=exp));
+											
+SELECT * FROM alumnes;
+
+ROLLBACK;
+
+
+</string>
+			<key>table</key>
+			<string>notes</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>202</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>SELECT * FROM alumnes</string>
+		<string>ROLLBACK</string>
+		<string>DELETE FROM alumnes
+	WHERE EXISTS (SELECT *
+					FROM assigs
+					WHERE codi NOT IN (SELECT assig
+											FROM notes
+											WHERE alumne=exp))</string>
+		<string>UPDATE notes
+	SET nf=((n1+n2+n3)/3) + 1</string>
+		<string>BEGIN</string>
+		<string>CREATE TABLE notesb(
+	alumne INTEGER,
+	assig VARCHAR(4) ,
+	alumnename VARCHAR(30) ,
+	n1 DECIMAL(4,2) ,
+	n2 DECIMAL(4,2) ,
+	n3 DECIMAL(4,2) ,
+	nf DECIMAL(4,2) ,
+	
+	CONSTRAINT pk_notes
+		PRIMARY KEY (alumne,assig),
+
+	CONSTRAINT fk_alumne	
+	FOREIGN KEY (alumne) REFERENCES alumnes(exp)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE,
+
+	CONSTRAINT fk_assig
+	FOREIGN KEY (assig) REFERENCES assigs(codi)
+			ON UPDATE CASCADE
+			ON DELETE CASCADE,
+	
+	CONSTRAINT fk_alumnename
+	FOREIGN KEY (alumnename) REFERENCES alumnes(nom)
+			ON UPDATE CASCADE
+			ON DELETE CASCADE
+
+)</string>
+		<string>CREATE TABLE notesb(
+	alumne INTEGER,
+	assig VARCHAR(4) ,
+	assig2 VARCHAR(4) ,
+	n1 DECIMAL(4,2) ,
+	n2 DECIMAL(4,2) ,
+	n3 DECIMAL(4,2) ,
+	nf DECIMAL(4,2) ,
+	
+	CONSTRAINT pk_notes
+		PRIMARY KEY (alumne,assig),
+
+	CONSTRAINT fk_alumne	
+	FOREIGN KEY (alumne) REFERENCES alumnes(exp)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE,
+
+	CONSTRAINT fk_assig
+	FOREIGN KEY (assig) REFERENCES assigs(codi)
+			ON UPDATE CASCADE
+			ON DELETE CASCADE,
+	
+	CONSTRAINT fk_assig2
+	FOREIGN KEY (assig2) REFERENCES assigs(codi)
+			ON UPDATE CASCADE
+			ON DELETE CASCADE
+
+)</string>
+		<string>INSERT INTO notes(alumne,assig,n1,n2,n3) VALUES(6,'ADDA',7,8,9)</string>
+		<string>INSERT INTO notes(alumne,assig,n1,n2,n3) VALUES(2,'ADDA',7,8,9)</string>
+		<string>INSERT INTO notes(alumne,assig,n1,n2,n3) VALUES(1,'PLE',4,5,6)</string>
+		<string>INSERT INTO notes(alumne,assig,n1,n2,n3) VALUES(1,'ADDA',1,2,3)</string>
+		<string>INSERT INTO assigs
+VALUES('PLE','Programació en Llenguatges Estructurats',8)</string>
+		<string>INSERT INTO assigs VALUES('ADDA','Anàlisi i Disseny d’Aplicacions Informàtiques',10)</string>
+		<string>INSERT INTO alumnes VALUES(2, "Josep", "1974-06-05")</string>
+		<string>INSERT INTO alumnes VALUES(1, "Pep", "1975-03-04")</string>
+		<string>CREATE TABLE notes(
+	alumne INTEGER,
+	assig VARCHAR(4) ,
+	n1 DECIMAL(4,2) ,
+	n2 DECIMAL(4,2) ,
+	n3 DECIMAL(4,2) ,
+	nf DECIMAL(4,2) ,
+	
+	CONSTRAINT pk_notes
+		PRIMARY KEY (alumne,assig),
+
+	CONSTRAINT fk_alumne	
+	FOREIGN KEY (alumne) REFERENCES alumnes(exp)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE,
+
+	CONSTRAINT fk_assig
+	FOREIGN KEY (assig) REFERENCES assigs(codi)
+			ON UPDATE CASCADE
+			ON DELETE CASCADE
+	
+)</string>
+		<string>CREATE TABLE assigs(
+	codi VARCHAR(4) PRIMARY KEY,
+	nom VARCHAR(30),
+	hores INTEGER)</string>
+		<string>CREATE TABLE alumnes(
+	exp INTEGER PRIMARY KEY AUTO_INCREMENT,
+	nom VARCHAR(30),
+	d_naix DATE
+)</string>
+		<string>USE proves_trans</string>
+		<string>CREATE DATABASE proves_trans</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.6.21</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
